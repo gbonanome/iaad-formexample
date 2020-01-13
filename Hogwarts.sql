@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `Hogwarts`
 --
+CREATE DATABASE IF NOT EXISTS `Hogwarts` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `Hogwarts`;
 
 -- --------------------------------------------------------
 
