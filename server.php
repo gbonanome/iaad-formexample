@@ -47,7 +47,7 @@
         // Inserisce nella risposta HTTP i risultati sotto forma di JSON
         echo json_encode($rows);
 
-
+        // Libera la memoria e chiude la connessione con il DB
         $result->free();
         $db->close();
     }
