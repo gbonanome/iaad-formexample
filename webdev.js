@@ -18,18 +18,18 @@ window.addEventListener( "load", function () {
 
 			const resp = JSON.parse(event.target.responseText);
 
-			if (resp.result.length === 0) {
+			if (resp.length === 0) {
 				// What to do if we do NOT have any result
 				div.innerHTML = "<p>Nessun risultato</p>"
 			}
 			else {
 				// What to do if we HAVE have some results
 
-				for (var i = 0; i < resp.result.length; i++) {
+				for (var i = 0; i < resp.length; i++) {
 					// Create a paragraph under #result div
 					const para = document.createElement('p');
 					// Insert a string with name and time
-					para.textContent = resp.result[i].row.Nome + " " + resp.result[i].row.Tempo;
+					para.textContent = resp[i].Nome + " " + resp[i].Tempo;
 					// Print <p> tags under #result div
 					div.appendChild(para);
 				}

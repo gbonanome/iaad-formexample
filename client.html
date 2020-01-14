@@ -3,17 +3,23 @@
 	<head>
 		<meta charset="utf-8">    
     	<title>Colleghiamoci ad un database</title>
+
+    	<!-- Questo script ci permette di inviare il modulo -->
     	<script src="webdev.js"></script>
 	</head>
 	<body>
 
-		<form id="searchForm" method="post" action="server.php">  
-			Nome: <input type="text" name="chiave" value="" placeholder="Cerca...">
+		<form id="searchForm" method="post" action="server.php">
+			<label>Nome: </label>
+			<input type="text" name="chiave" value="" placeholder="Cerca...">
+			
 			<input type="submit" name="cerca" value="Cerca">
 		</form>
+
+		<!-- Nel div qui sotto verranno mostrati i risultati-->
 		<div id="result">
 			
 
-		</div>		
+		</div>
 	</body>
 </html>
