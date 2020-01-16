@@ -39,12 +39,22 @@ window.addEventListener( "load", function () {
 			else {
 				// Cosa succede se c'è uno o più risultati
 
-				// Utilizzo un ciclo per scorrere tutti i risultati
+				// Utilizzo un ciclo per scorrere tutti i risultati.
+				// Poichè resp è un array, ovvero una lista di oggetti,
+				// possiamo scorrerli utilizzando un "indice" (i) che viene
+				// incrementato automaticamente. Nel nostro caso
+				// dentro a resp[0] ci sarà la stringa {"ID":"1","Nome":"Polisucco","Tempo":"4544","IDEffetto":"2"}
+				// dentro a resp[1] ci sarà la stringa {"ID":"3","Nome":"Elisir","Tempo":"6","IDEffetto":"1"}
+				// dentro a resp[2] ci sarà la stringa {"ID":"4","Nome":"Tonico di drago","Tempo":"56","IDEffetto":"1"}
+				// ecc. ecc.
 				for (var i = 0; i < resp.length; i++) {
 					// Creo un elemento paragrafo
 					const para = document.createElement('p');
 					// Come testo del paragrafo concateno 
-					// le stringhe Nome e Tempo
+					// le stringhe Nome e Tempo, dove "Nome" e "Tempo"
+					// sono le colonne della mia tabella Pozioni
+					// ovvero quello che mi è stato restituito sotto forma
+					// di JSON dalla query fatta da server.php
 					para.textContent = resp[i].Nome + " " + resp[i].Tempo;
 					// Inserisco nel div dei risultati
 					// il paragrafo appena creato
