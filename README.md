@@ -6,7 +6,7 @@ Un piccolo esempio di pagina HTML con connessione ad un DB utilizzando un sempli
 ### 1. Dove mettere i file
 Scaricate i file all'interno della cartella pubblica del vostro webserver.\
 Se usate MAMP (su Mac) potete raggiungerla dalle preferenze dell'applicazione cliccando su _Web Server_ quindi andare su _Document Root_ e cliccare _Show in Finder_.\
-Se uste XAMPP (su Windows) dovrete avviare il webserver, quindi andare su _Volumes_ e cliccare prima _Mount_, quindi cliccare su _Explore_ e aprire la cartella _htdocs_.
+Se usate XAMPP (su Windows) dovrete avviare il webserver, quindi andare su _Volumes_ e cliccare prima _Mount_, quindi cliccare su _Explore_ e aprire la cartella _htdocs_.
 
 ### 2. Caricate il DB d'esempio
 Aprite phpMyAdmin e quindi importate il file `Hogwarts.sql`, verrà creato un nuovo database chiamato _"Hogwarts"_ con tutte le tabelle necessarie a far funzionare l'esempio.
