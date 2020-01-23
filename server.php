@@ -21,11 +21,7 @@
         $nomePozione =  $_POST['chiave'] ;
 
         // La query SQL di ricerca
-        $sql = <<<SQL
-            SELECT *
-            FROM `Pozioni`
-            WHERE `Nome` LIKE '%$nomePozione%' 
-        SQL;
+        $sql = "SELECT * FROM `Pozioni` WHERE `Nome` LIKE '%".$nomePozione."%'";
 
         // Esegue la query e mette i risultati nella variabile $result
         $result = $db->query($sql);
