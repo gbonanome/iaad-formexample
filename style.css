@@ -3,4 +3,32 @@
 */
 body {
 	background-color: gold;
+	font: 16px/18px Arial;
+	margin: 40px;
+}
+
+input[type="submit"] {
+	padding: 5px;
+	border-radius: 4px;
+	border: none;
+	background: lightskyblue;
+}
+
+#result li {
+	line-height: 2em;
+	list-style: "🚀";
+	padding-left: 5px;
+}
+
+#result li span {
+	margin-left: 10px;
+	padding: 4px;
+	border-radius: 4px;
+	color: #fff;
+	background-color: blueviolet;
+}
+
+#result .no-result {
+	font-style: italic;
+	color: red;
 }

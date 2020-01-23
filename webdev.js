@@ -34,7 +34,7 @@ window.addEventListener( "load", function () {
 
 			if (resp.length === 0) {
 				// Cosa succede se ho 0 risultati
-				div.innerHTML = "<p>Nessun risultato</p>"
+				div.innerHTML = '<p class="no-result">Nessun risultato</p>'
 			}
 			else {
 				// Cosa succede se c'è uno o più risultati
@@ -47,19 +47,25 @@ window.addEventListener( "load", function () {
 				// dentro a resp[1] ci sarà la stringa {"ID":"3","Nome":"Elisir","Tempo":"6","IDEffetto":"1"}
 				// dentro a resp[2] ci sarà la stringa {"ID":"4","Nome":"Tonico di drago","Tempo":"56","IDEffetto":"1"}
 				// ecc. ecc.
+				const ul = document.createElement('ul');
+
 				for (var i = 0; i < resp.length; i++) {
-					// Creo un elemento paragrafo
-					const para = document.createElement('p');
-					// Come testo del paragrafo concateno 
-					// le stringhe Nome e Tempo, dove "Nome" e "Tempo"
-					// sono le colonne della mia tabella Pozioni
-					// ovvero quello che mi è stato restituito sotto forma
-					// di JSON dalla query fatta da server.php
-					para.textContent = resp[i].Nome + " " + resp[i].Tempo;
-					// Inserisco nel div dei risultati
-					// il paragrafo appena creato
-					div.appendChild(para);
+					// Creo un elemento <li> e uno <span>
+					const li = document.createElement('li');
+					const span = document.createElement('span');
+					// Come testo inserisco la stringa
+					// Nome, mentre Tempo la inserisco all'interno
+					// dello span. "Nome" e "Tempo" sono le colonne della 
+					// mia tabella Pozioni ovvero quello che mi è stato restituito 
+					// sotto forma di JSON dalla query fatta da server.php
+					span.textContent = resp[i].Tempo;
+					li.textContent = resp[i].Nome;
+					li.appendChild(span);
+					// Costruisco la lista
+					ul.appendChild(li);
 				}
+				// Stampo la lista all'interno del <div> risultati 
+				div.appendChild(ul)
 			}
 
 		} );
