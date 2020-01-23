@@ -20,9 +20,6 @@ Potreste dover digitare un indirizzo del tipo
 `http://localhost/iaad-formexample/client.html`
 dove _"iaad-formexample"_ è il nome della cartella che contiene tutti i vostri file.
 
-## NOTE
-Su XAMPP abbiamo dei problemi :( aiuto
-
 ## Credits
 Creato da Giulio Bonanome e Giuseppe Menegoz per i corsi Web Development e Basi di Dati del corso di laurea in Digital Communication Design presso IAAD Bologna, A.A. 2019-2020.
 
